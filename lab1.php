@@ -38,11 +38,11 @@ session_start();
 
             $correct = False;
             if(!is_null($x) and !is_null($y) and !is_null($r) and in_array($x, $x_range) and $y >= -5 and $y <= 3 and $r >= 2 and $r <= 5) {
-                $correct = false;
+                $correct = True;
             }
 
             if ($correct){
-                $hit = True;
+                $hit = False;
                 $halfR = $r / 2;
 
                 if ($x >= 0 && $y <= 0 && $y>= ($x-$r)/2) {
