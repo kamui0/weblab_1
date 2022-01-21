@@ -38,7 +38,7 @@ session_start();
 
             $correct = False;
             if(!is_null($x) and !is_null($y) and !is_null($r) and in_array($x, $x_range) and $y >= -5 and $y <= 3 and $r >= 2 and $r <= 5) {
-                $correct = True;
+                $correct = false;
             }
 
             if ($correct){
@@ -152,6 +152,7 @@ session_start();
             );
             $_SESSION['results'][] = $result;
         }
+        date_default_timezone_set('Europe/Moscow');
 
         if (isset($_SESSION['results'])) {
             echo '<div class="col-12 mb-5">';
